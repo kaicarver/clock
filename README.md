@@ -40,7 +40,42 @@ Yup:
 
 > Now things become a bit more difficult when you want to implement your first class component (React Container). You will probably get compiler errors because of not declared types definitions of props and state.
 
+[Later...]
 
+Um, can't yet get a single thing to compile...
+
+Noted, in Twitter thread for announcement that create-react supports TS...:
+
+> Alan Shortis
+@alanshortis
+·
+Oct 21, 2018<br/>
+Replying to 
+@brunolemos
+@dan_abramov
+and 4 others<br/>
+> It’s becoming clear that I’m going to have to learn typescript soon. Sometimes the heap of things to learn feels insurmountable.
+
+> Dan Abramov
+@dan_abramov
+·
+Oct 21, 2018<br/>
+Why though? Like, I wouldn’t even look at it unless I needed it. We’re adding it because people want it, not because we’re endorsing it
+
+> Babak
+@babakness
+·
+Oct 22, 2018<br/>
+Why do you dislike Typescript? I find that it’s particularly useful for FP. A nice example is the fp-ts library.
+
+> 
+> Dan Abramov
+@dan_abramov
+·
+Oct 22, 2018<br/>
+I don’t like FP that much and I also feel like TS code is too heavy on annotations
+
+Time to search around some more? Or just follow Dan Abramov's advice?
 
 ## Available Scripts
 
