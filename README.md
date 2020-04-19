@@ -1,4 +1,40 @@
+## Notes
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The actual command was:
+
+```bash
+npx create-react-app clock --template typescript 
+```
+
+It took an extra nice long time, and now... TypeScript! Woo-hoo!
+
+Annnd... I'm almost immediately at my first TypeScript error.
+
+### Hello TypeScript
+
+Here's my first error, after copying some Perfectly Fine code from another React project:
+
+```javascript
+Failed to compile.
+
+/home/kai/clock/src/App.tsx
+TypeScript error in /home/kai/clock/src/App.tsx(32,24):
+Parameter 'props' implicitly has an 'any' type.  TS7006
+
+    30 | }
+    31 |
+  > 32 | function FormattedDate(props) {
+```
+
+Okaaay...
+
+So I decided to see if there's an easy way to transition to TS from JS. I landed here:
+
+https://programmingwithmosh.com/javascript/react-typescript/
+
+Let's see if it helps.
 
 ## Available Scripts
 
