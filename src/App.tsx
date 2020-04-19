@@ -1,3 +1,4 @@
+//import React, { Props } from 'react';
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -23,52 +24,25 @@ function App() {
         </a>
       </header>
       <main>
-        <WorldClocks />
+        <Home />
       </main>
     </div>
   );
 }
 
-function FormattedDate(props) {
-  return <h2>It is {props.date.toLocaleTimeString(props.locale)} on {Intl.DateTimeFormat(props.locale, { timeZone: props.timeZone }).format(props.date)} in {props.timeZone}.</h2>;
+class Home extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+      this.state = {};
+    }
+    render(): JSX.Element | null {
+      return null;
+    }
 }
-class Clock extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {date: new Date()};
-    }
-    componentDidMount() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        1000
-      );
-    }
-    componentWillUnmount() {
-      clearInterval(this.timerID);
-    }
-    tick() {
-      this.setState({
-        date: new Date()
-      });
-    }
-    render() {
-      return (
-        <div>
-          <FormattedDate date={this.state.date} locale={this.props.locale} timeZone={this.props.timeZone}  />
-        </div>
-      );
-    }
-  }
-  function WorldClocks() {
-    return (
-      <div>
-        <Clock locale="fr-FR" timeZone="Europe/Paris"/>
-        <Clock locale="zh-TW" timeZone="Asia/Taipei"/>
-        <Clock locale="ar-EG" timeZone="Africa/Cairo"/>
-        <Clock/>
-      </div>
-    );
-  }
+interface Props {
+  readonly user: User
+}
 
+interface State {}
 
 export default App;

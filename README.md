@@ -36,6 +36,12 @@ https://programmingwithmosh.com/javascript/react-typescript/
 
 Let's see if it helps.
 
+Yup:
+
+> Now things become a bit more difficult when you want to implement your first class component (React Container). You will probably get compiler errors because of not declared types definitions of props and state.
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
