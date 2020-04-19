@@ -22,8 +22,53 @@ function App() {
           Learn React
         </a>
       </header>
+      <main>
+        <WorldClocks />
+      </main>
     </div>
   );
 }
+
+function FormattedDate(props) {
+  return <h2>It is {props.date.toLocaleTimeString(props.locale)} on {Intl.DateTimeFormat(props.locale, { timeZone: props.timeZone }).format(props.date)} in {props.timeZone}.</h2>;
+}
+class Clock extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {date: new Date()};
+    }
+    componentDidMount() {
+      this.timerID = setInterval(
+        () => this.tick(),
+        1000
+      );
+    }
+    componentWillUnmount() {
+      clearInterval(this.timerID);
+    }
+    tick() {
+      this.setState({
+        date: new Date()
+      });
+    }
+    render() {
+      return (
+        <div>
+          <FormattedDate date={this.state.date} locale={this.props.locale} timeZone={this.props.timeZone}  />
+        </div>
+      );
+    }
+  }
+  function WorldClocks() {
+    return (
+      <div>
+        <Clock locale="fr-FR" timeZone="Europe/Paris"/>
+        <Clock locale="zh-TW" timeZone="Asia/Taipei"/>
+        <Clock locale="ar-EG" timeZone="Africa/Cairo"/>
+        <Clock/>
+      </div>
+    );
+  }
+
 
 export default App;
